@@ -1,9 +1,6 @@
 spring:
   application:
     name: order-service
-
-server:
-  port: 8201
   
 eureka:
   client:
@@ -23,3 +20,17 @@ management:
       exposure:
         include: hystrix.stream
                 
+---
+spring:
+  profiles: order1
+  
+server:
+  port: 8201
+  
+---
+spring:
+  profiles: order2
+  
+server:
+  port: 8202
+      
